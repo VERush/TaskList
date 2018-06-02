@@ -28,6 +28,11 @@ public class TaskDao implements BaseDao<Task>{
 		TypedQuery<Task> namedQuery = eManager.createNamedQuery("list_all", Task.class);
 		return namedQuery.getResultList();
 	}
+	
+	public List<Task> listById(int id){
+		TypedQuery<Task> namedQuery = eManager.createNamedQuery("list_by_id", Task.class);
+		return namedQuery.getResultList();
+	}
 
 	@Override
 	public Task update(Task obj) {

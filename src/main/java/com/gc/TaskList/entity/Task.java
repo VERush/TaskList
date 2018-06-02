@@ -9,7 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.NamedQuery;
 
 @Entity
-@NamedQuery(name = "find_all_tasks", query = "select t from Task t")
+
+@NamedQuery(name = "find_by_id", query = "select t from Task t where t.userid = :userid")
 public class Task {
 
 	@Id
