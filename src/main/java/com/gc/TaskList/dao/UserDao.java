@@ -23,10 +23,10 @@ public class UserDao implements BaseDao<User> {
 		return eManager.find(User.class, id);
 	}
 	
-	public List<User> findByName(String name, String password) {
+	public User findByName(String name, String password) {
 		TypedQuery<User> namedQuery = eManager.createNamedQuery("find_by_name", User.class)
-	    .setParameter("custName", name) .setParameter("custPassword", password);
-		return namedQuery.getResultList();
+	    .setParameter("name", name) .setParameter("password", password);
+		return namedQuery.getSingleResult();
 	}
 	
 	@Override

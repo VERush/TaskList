@@ -1,5 +1,6 @@
 package com.gc.TaskList;
 
+import java.sql.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,15 +30,29 @@ public class HomeController {
 		return new ModelAndView("index");
 	}
 	@RequestMapping("signin")
-	public ModelAndView login (@RequestParam("name") String name, @RequestParam("password") String inputPass) {
-		User u1 = u.findByName(name);
+	public ModelAndView login (@RequestParam("name") String name, @RequestParam("password") String password) {
+		User u1 = u.findByName(name, password);
 		if(u1 ==null) {
 			return new ModelAndView("index","User", "Match not found, Please reenter or register");
 		}
-		if(u1.getPassword().equals(inputPass)) {
-			List<Task> tasks = 
+		if(u1.getPassword().equals(password)) {
+			List<Task> tasks = t.listByUserId(u1.getUserid());
+			return new ModelAndView("tasklist", "tasks", tasks);
 		}
-		return new ModelAndView("user");
+		return new ModelAndView("index");
 	}
-	
+	@RequestMapping("signup")
+	public ModelAndView signUp(@RequestParam("name")String name, @RequestParam("email")String email, @RequestParam("password")String password) {
+	User u1 = new User (name, email, password);	
+	u.update(u1);
+		return new ModelAndView ("tasklist", "tasks", null);
+	}
+	@RequestMapping("addtotask")
+	public ModelAndView addtotask(@RequestParam("task")String task,@RequestParam("duedate")Date duedate,@RequestParam("userid")int userid ) {
+		Task t1 = new Task(userid, task, duedate, false);
+		System.out.println(t1);
+		t.update(t1); System.out.println(t1);
+		List<Task> tasks = t.listByUserId(t1.getUserid());
+		return new ModelAndView("tasklist", "tasks", tasks);
+	}
 }

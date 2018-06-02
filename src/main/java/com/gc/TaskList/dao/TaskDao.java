@@ -29,8 +29,9 @@ public class TaskDao implements BaseDao<Task>{
 		return namedQuery.getResultList();
 	}
 	
-	public List<Task> listById(int id){
-		TypedQuery<Task> namedQuery = eManager.createNamedQuery("list_by_id", Task.class);
+	public List<Task> listByUserId(int userid){
+		TypedQuery<Task> namedQuery = eManager.createNamedQuery("list_by_user_id", Task.class)
+				.setParameter("userid", userid);
 		return namedQuery.getResultList();
 	}
 

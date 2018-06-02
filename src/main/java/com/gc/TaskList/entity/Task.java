@@ -1,6 +1,8 @@
 package com.gc.TaskList.entity;
 
-import java.util.Date;
+
+
+import java.sql.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,7 +12,7 @@ import javax.persistence.NamedQuery;
 
 @Entity
 
-@NamedQuery(name = "find_by_id", query = "select t from Task t where t.userid = :userid")
+@NamedQuery(name = "list_by_user_id", query = "select t from Task t where t.userid = :userid")
 public class Task {
 
 	@Id

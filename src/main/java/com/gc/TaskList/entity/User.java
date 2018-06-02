@@ -8,7 +8,7 @@ import javax.persistence.NamedQuery;
 
 @Entity
 //@NamedQuery(name="find_all_users", query="select u from User u")
-@NamedQuery(name="find_by_name", query="select u from User u where u.name = :userName and u.password = :userPassword")
+@NamedQuery(name="find_by_name", query="select u from User u where u.name = :name and u.password = :password")
     	
 public class User {
 	

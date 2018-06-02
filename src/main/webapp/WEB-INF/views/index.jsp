@@ -15,8 +15,8 @@
 	crossorigin="anonymous">
 </head>
 <body class="text-center">
-	<div class="container"></div>
-	<h1 class="mt-5">Task List</h1>
+	<div class="container">
+		<h1 class="mt-5">Task List</h1>
 	</div>
 	<div class="container mt-5">
 		<div class="row">
