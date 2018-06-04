@@ -18,10 +18,10 @@ public class Task {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	int userid;
-	String task;
-	Date duedate;
-	boolean complete;
+	private Integer userid;
+	private String task;
+	private Date duedate;
+	private boolean complete;
 
 	public Task() {
 

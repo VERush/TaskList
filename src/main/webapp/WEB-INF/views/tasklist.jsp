@@ -43,16 +43,15 @@
 	</div>
 	<div class="container bg-success mt-5">
 		<h1>Add New Task</h1>
-<!--  
+  
 		<form class="form-group" action="addtotask">
 			<input type="text" name="task" placeholder="Enter New Task">
 			<input type="date" name="duedate" placeholder="YYYY-MM-DD"> <input
-				type="hidden" name="userid" value=${tasks.userid }> <input
-				type="hidden" name="complete" value="false"> <input
+				type="hidden" name="userid" value="${userid }"><input
 				type="submit" name="Submit">
 
 		</form>
- -->
+
 	</div>
 
 </body>
