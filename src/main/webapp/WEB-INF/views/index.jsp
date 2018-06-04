@@ -18,35 +18,35 @@
 	<div class="container">
 		<h1 class="mt-5">Task List</h1>
 	</div>
-	<div class="container mt-5">
+	<div class="container">
 		<div class="row">
 		
 		
-		<div class="col-5">
+		<div class="col-md mt-5">
 		
 		<h1>Sign In!</h1>
-		<form action="signin">
-		<input type="name" name="name" placeholder="Name">
-		<input type="password" name="password" placeholder="Password">
-		<input type="submit" value="submit" class="btn btn-primary">
+		<form class="form-group" action="signin">
+		<input class="form-control" type="name" name="name" placeholder="Name" required>
+		<input class="form-control" type="password" name="password" placeholder="Password" required>
+		<input class="btn btn-primary" type="submit" value="Submit">
 		</form>
 		
 		</div>
 		
 		
-		<div class="col-1">
+		<div class="col-md mt-5">
 		<h1>OR</h1>
 		</div>
 		
 		
-		<div class="col-5">
+		<div class="col-md mt-5">
 		
 		<h1>Sign Up!</h1>
-		<form action="signup">
-		<input type="text" name="name" placeholder="Enter your name">
-		<input type="email" name="email" placeholder="Enter your email">
-		<input type="password" name="password" placeholder="Enter your password">
-		<input type="submit" value="submit" class="btn btn-primary">
+		<form class="form-group" action="signup">
+		<input class="form-control" type="text" name="name" placeholder="Enter your name" required>
+		<input class="form-control" type="email" name="email" placeholder="Enter your email" required>
+		<input class="form-control" type="password" name="password" placeholder="Enter your password" required>
+		<input class="btn btn-primary" type="submit" value="Submit">
 		</form>	
 		
 		</div>

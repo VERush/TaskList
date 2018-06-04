@@ -20,7 +20,7 @@
 	<div class="container mt-5">
 
 		<table
-			class="table table-bordered table-striped table-hover bg-warning">
+			class="table table-sm table-bordered table-striped table-hover bg-warning">
 
 
 
@@ -50,10 +50,10 @@
 		<h1>Add New Task</h1>
   
 		<form class="form-group" action="addtotask">
-			<input type="text" name="task" placeholder="Enter New Task">
-			<input type="date" name="duedate" placeholder="YYYY-MM-DD"> <input
-				type="hidden" name="userid" value="${userid }"><input
-				type="submit" name="Submit" class="btn-primary">
+			<input class="form-control-inline" type="text" name="task" placeholder="Enter New Task" required>
+			<input class="form-control-inline" type="date" name="duedate" placeholder="YYYY-MM-DD" required> <input
+				class="form-control" type="hidden" name="userid" value="${userid }"><input
+				class="btn btn-primary" type="submit" name="Submit">
 
 		</form>
 
