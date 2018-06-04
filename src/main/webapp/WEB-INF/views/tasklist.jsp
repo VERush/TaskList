@@ -28,6 +28,8 @@
 				<th>Task</th>
 				<th>Due Date</th>
 				<th>Complete</th>
+				<th>Update</th>
+				<th>Delete</th>
 			</thead>
 			<tbody>
 				<c:forEach var="myVar" items="${tasks}">
@@ -35,6 +37,9 @@
 						<td>${myVar.task}</td>
 						<td>${myVar.duedate}</td>
 						<td>${myVar.complete}</td>
+						<td> <a href="/update?id=${myVar.id}">Complete</a> </td>
+						<td> <a href="/remove?id=${myVar.id}">Delete</a> </td>
+						
 					</tr>
 				</c:forEach>
 			</tbody>
