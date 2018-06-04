@@ -38,7 +38,7 @@
 						<td>${myVar.duedate}</td>
 						<td>${myVar.complete}</td>
 						<td> <a href="/update?id=${myVar.id}">Complete</a> </td>
-						<td> <a href="/remove?id=${myVar.id}">Delete</a> </td>
+						<td> <a href="/delete?id=${myVar.id}">Delete</a> </td>
 						
 					</tr>
 				</c:forEach>
