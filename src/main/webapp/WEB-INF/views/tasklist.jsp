@@ -37,8 +37,8 @@
 						<td>${myVar.task}</td>
 						<td>${myVar.duedate}</td>
 						<td>${myVar.complete}</td>
-						<td> <a href="/update?id=${myVar.id}">Complete</a> </td>
-						<td> <a href="/delete?id=${myVar.id}">Delete</a> </td>
+						<td> <a href="/update?id=${myVar.id}"><button class="btn btn-primary">Complete</button></a> </td>
+						<td> <a href="/delete?id=${myVar.id}"><button class="btn btn-primary">Delete</button></a> </td>
 						
 					</tr>
 				</c:forEach>
@@ -53,7 +53,7 @@
 			<input type="text" name="task" placeholder="Enter New Task">
 			<input type="date" name="duedate" placeholder="YYYY-MM-DD"> <input
 				type="hidden" name="userid" value="${userid }"><input
-				type="submit" name="Submit">
+				type="submit" name="Submit" class="btn-primary">
 
 		</form>
 
