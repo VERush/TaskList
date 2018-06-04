@@ -44,5 +44,10 @@ public class TaskDao implements BaseDao<Task>{
 	public void delete(int id) {
 		eManager.remove(findById(id));
 	}
+	
+	public void deleteById(int id) {
+		Task t = findById(id);
+		eManager.remove(t);
+	}
 
 }
