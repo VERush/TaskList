@@ -13,8 +13,10 @@
 	rel="stylesheet"
 	integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
 	crossorigin="anonymous">
+	
+	
 </head>
-<body class="text-center">
+<body class="text-center bg-warning">
 	<div class="container">
 		<h1 class="mt-5">Task List</h1>
 	</div>
@@ -22,13 +24,13 @@
 		<div class="row">
 		
 		
-		<div class="col-md mt-5">
+		<div class="col-md mt-5 bg-info">
 		
 		<h1>Sign In!</h1>
 		<form class="form-group" action="signin">
 		<input class="form-control" type="name" name="name" placeholder="Name" required>
 		<input class="form-control" type="password" name="password" placeholder="Password" required>
-		<input class="btn btn-primary" type="submit" value="Submit">
+		<input class="btn btn-success" type="submit" value="Submit">
 		</form>
 		
 		</div>
@@ -39,14 +41,14 @@
 		</div>
 		
 		
-		<div class="col-md mt-5">
+		<div class="col-md mt-5 bg-info">
 		
 		<h1>Sign Up!</h1>
 		<form class="form-group" action="signup">
 		<input class="form-control" type="text" name="name" placeholder="Enter your name" required>
 		<input class="form-control" type="email" name="email" placeholder="Enter your email" required>
 		<input class="form-control" type="password" name="password" placeholder="Enter your password" required>
-		<input class="btn btn-primary" type="submit" value="Submit">
+		<input class="btn btn-success" type="submit" value="Submit">
 		</form>	
 		
 		</div>

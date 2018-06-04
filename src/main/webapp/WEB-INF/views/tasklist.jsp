@@ -11,6 +11,14 @@
 	rel="stylesheet"
 	integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
 	crossorigin="anonymous">
+	
+	<style>
+	.table > tbody > tr > td {
+	vertical-align: middle;
+	}
+	</style>
+	
+	
 </head>
 <body class=" bg-info text-center">
 	<div class="container mt-5">
