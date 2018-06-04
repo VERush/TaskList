@@ -28,7 +28,7 @@
 		<form action="signin">
 		<input type="name" name="name" placeholder="Name">
 		<input type="password" name="password" placeholder="Password">
-		<input type="submit" value="submit" class="btn-secondary">
+		<input type="submit" value="submit" class="btn btn-primary">
 		</form>
 		
 		</div>
@@ -46,7 +46,7 @@
 		<input type="text" name="name" placeholder="Enter your name">
 		<input type="email" name="email" placeholder="Enter your email">
 		<input type="password" name="password" placeholder="Enter your password">
-		<input type="submit" value="submit" class="btn-secondary">
+		<input type="submit" value="submit" class="btn btn-primary">
 		</form>	
 		
 		</div>
