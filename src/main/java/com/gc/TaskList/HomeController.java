@@ -16,7 +16,6 @@ import com.gc.TaskList.dao.UserDao;
 import com.gc.TaskList.entity.Task;
 import com.gc.TaskList.entity.User;
 
-import dot.com.Jcoffeeshop.entity.Items;
 
 @Controller
 @SessionAttributes({"userid"})
@@ -65,8 +64,12 @@ public class HomeController {
 	}
 	@RequestMapping("delete")
 	public ModelAndView deleteById(@RequestParam("id")int id) {
+		Task t1 = t.findById(id);
+		int userid = t1.getUserid();
+		
 		t.deleteById(id);
-		List<Task> tasks = t.listByUserId(t1.getUserid());
+		List<Task> tasks = t.listByUserId(userid);
+		
 		return new ModelAndView("tasklist", "tasks", tasks);
 }
 	@RequestMapping("update")
